@@ -31,29 +31,25 @@ namespace Houk_Inventory_Project
                 {
                     case "1":
                         //create a new Bicycle and add it to the cart
-                        shipper.Add(new Bicycle());
-                        Console.WriteLine("1 Bicycle has been added");
+                        Console.WriteLine(shipper.Add(new Bicycle()));                      
                         Console.WriteLine("Total items in order: " + shipper.itemCount);
                         Refresh();
                         break;
                     case "2":
                         //create a new LawnMower object and add it to the cart
-                        shipper.Add(new LawnMower());
-                        Console.WriteLine("1 Lawn Mower has been added");
+                        Console.WriteLine(shipper.Add(new LawnMower()));                        
                         Console.WriteLine("Total items in order: " + shipper.itemCount);
                         Refresh();
                         break;
                     case "3":
                         //create a new BaseballGlove object and add it to the cart
-                        shipper.Add(new BaseballGlove());
-                        Console.WriteLine("1 Baseball Glove has been added");
+                        Console.WriteLine(shipper.Add(new BaseballGlove()));
                         Console.WriteLine("Total items in order: " + shipper.itemCount);
                         Refresh();
                         break;
                     case "4":
                         //create a new Crackers object and add it to the cart
-                        shipper.Add(new Crackers());
-                        Console.WriteLine("1 Crackers has been added");
+                        Console.WriteLine(shipper.Add(new Crackers()));
                         Console.WriteLine("Total items in order: " + shipper.itemCount);
                         Refresh();
                         break;

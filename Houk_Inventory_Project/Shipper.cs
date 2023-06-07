@@ -11,25 +11,33 @@
         private decimal _totalCost = 0.00M;
         
         //Void function that accepts an object of type IShippable and adds it to the list
-        public void Add(IShippable item)
+        public string Add(IShippable item)
         {
             _cart.Add(item);
             _itemCount++;
             if(item.Product == "Bicycle")
             {
                 _bicycleCount++;
+                return "1 Bicycle has been added to the cart."; 
             }
             else if (item.Product == "Lawn Mower")
             {
                 _lawnMowerCount++;
+                return "1 Lawn Mower has been added to the cart.";
             }
             else if (item.Product == "Baseball Glove")
             {
                 _baseballGloveCount++;
+                return "1 Baseball Glove has been added to the cart.";
             }
             else if (item.Product == "Crackers")
             {
                 _crackerCount++;
+                return "1 Crackers has been added to the cart.";
+            }
+            else
+            {
+                return "Item not found.";
             }
         }
 
