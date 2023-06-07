@@ -2,7 +2,7 @@
 {    
     internal class Shipper
     {
-        private List<IShippable> _shippables = new List<IShippable>();
+        private List<IShippable> _cart = new List<IShippable>();
         private int _bicycleCount = 0;
         private int _lawnMowerCount = 0;
         private int _baseballGloveCount = 0;
@@ -13,7 +13,7 @@
         //Void function that accepts an object of type IShippable and adds it to the list
         public void Add(IShippable item)
         {
-            _shippables.Add(item);
+            _cart.Add(item);
             _itemCount++;
             if(item.Product == "Bicycle")
             {
@@ -98,7 +98,7 @@
             }
             else
             {
-                foreach (IShippable item in _shippables)
+                foreach (IShippable item in _cart)
                 {
                     _totalCost += item.ShipCost;
                 }
@@ -114,38 +114,6 @@
                 return _itemCount;
             }
         }
-
-        //public int bicycleCount
-        //{
-        //    get
-        //    {
-        //        return _bicycleCount;
-        //    }
-        //}
-
-        //public int lawnMowerCount
-        //{
-        //    get
-        //    {
-        //        return _lawnMowerCount;
-        //    }
-        //}
-
-        //public int baseballGloveCount
-        //{
-        //    get
-        //    {
-        //        return _baseballGloveCount;
-        //    }
-        //}
-
-        //public int crackerCount
-        //{
-        //    get
-        //    {
-        //        return _crackerCount;
-        //    }
-        //}
 
         public decimal totalCost
         {
